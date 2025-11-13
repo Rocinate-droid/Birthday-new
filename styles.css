@@ -1,0 +1,164 @@
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+#string-lights {
+    display:flex;
+    justify-content:space-around;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.lamp {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    filter: brightness(1.1); 
+    transition: opacity 4s ease;
+}
+
+#wishes {
+    font-family: "Oldenburg", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size:50px;
+    margin: 0px;
+    transform: translateY(-100px);
+    animation: bounceDrop 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes bounceDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#name {
+    font-family: "Oldenburg", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size:40px;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: dropIn 2s ease-out forwards;
+}
+@keyframes dropIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#greet-name {
+    align-self: center;
+    justify-self: center;
+}
+#greet-text {
+    align-self: center;
+    justify-self: center;
+}
+#greetings , #cake, #message {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.lamp.visible {
+  opacity: 1;
+}
+.buttons {
+  border-radius: 10px;
+  background-color: aqua;
+  padding: 10px;
+  font-family: "Oldenburg", serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 3s ease-in;
+}
+.hidden {
+  opacity: 0;
+  transition: opacity 3s ease-out;
+  pointer-events: none; /* prevents interaction while hidden */
+}
+.light-button-div {
+    display: flex;
+    position:absolute;
+    bottom: 0;
+    margin-bottom:10px;
+    justify-content: center;
+    width: 100%;
+}
+#banner-left {
+    justify-self: flex-start;
+    align-self: flex-start;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 180px; 
+    height: 180px;
+}
+
+#banner-right {
+    justify-self: flex-end;
+    align-self: flex-end;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: 180px; 
+    height: 180px;
+}
+
+@media screen and (max-width: 585px) {
+  #wishes {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  #wishes {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #banner-left, #banner-right {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #banner-left, #banner-right {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 417px) {
+  #banner-left, #banner-right {
+    height: 130px;
+    width: 130px;
+  }
+}
+@media screen and (max-height: 670px) {
+  #banner-left, #banner-right {
+    height: 100px;
+    width: 100px;
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="string-lights">
+    </div>
+    <audio id="song">
+        <source src="static/song.mp3" type="audio/mp3">
+    </audio>
+    <div id="greetings">
+        <div id="greet-name">
+        </div>
+        <div id="greet-text">
+        </div>
+    </div>
+    <div id="cake">
+    </div>
+    <div id="message">
+        <p id="paragraph" class="hidden" style="font-size: x-large; margin-bottom: 10px;"></p>
+    </div>
+    <div class="light-button-div" id="bottom-banner">
+    <img id="banner-left" class="hidden" src="static/left-banner.png">
+    <img id="banner-right" class="hidden" src="static/right-banner.png">
+    <button class="buttons" id="lights-button" onclick="turnOnLights()">Turn On Lights</button>
+    </div>
+<script src="script.js"></script>
+<script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+  type="module"
+></script>
+</body>
+</html>
+
+
+
